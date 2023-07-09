@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SHOOTING GAME</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="./favicon.ico">
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+      }
+      #modalEL{
+        z-index:1
+      }
+      canvas{
+        z-index:-1
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed text-white text-sm ml-2 mt-2 select-none">
+      <span>Score: </span>
+      <span id="scoreEl">0</span>
+    </div>
+
+    <div id="modalEl" class="fixed inset-0 flex items-center justify-center">
+      <div class="bg-white max-w-md w-full p-6 text-center">
+        <h1 id="bigScoreEl" class="text-4xl font-bold select-none">0</h1>
+        <p class="text-sm text-gray-700 select-none mb-4">Points</p>
+        <div>
+          <button id="startGameBtn" class="bg-blue-500 text-white w-full py-3 rounded-full text-sm">
+            Start Game
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <canvas></canvas>
+  
+    <script src="./js/canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>
